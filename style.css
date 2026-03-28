@@ -1,0 +1,51 @@
+
+.first{
+    padding: 5px;
+    margin-left: 30%;
+    margin-top: 7%;
+    background-color: rgb(226, 251, 202); 
+    border: 3px solid rgb(91, 90, 88);
+    height: 405px;
+    width: 240px;
+    border-radius: 8px;
+}
+
+input{
+    margin-top:3px;
+    height: 50px;
+    width: 230px;
+    background-color: rgb(184, 184, 181);
+    margin-bottom: 4px;
+    font-size: x-large;
+    border-radius: 5px;
+
+    
+}
+
+button{
+    height: 70px;
+    width: 53px;
+    background-color: rgb(126, 125, 123) ;
+    font-size: x-large;
+    border: 2px solid rgb(184, 155, 127);
+    margin: 2px;
+    border-radius: 7px;
+    
+}
+#first button{
+    height: 40px;
+    width: 114px;
+}
+
+
+
+button:hover{
+    background-color: rgb(108, 108, 107);
+    border: 2px solid burlywood;
+}
+
+
+/*
+input[type=number] {
+    appearance: textfield;
+  }*/
