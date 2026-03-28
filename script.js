@@ -1,35 +1,41 @@
 
 
+let string = "";
+let buttons = document.querySelectorAll('.button');
+let display = document.getElementById('display');
 
-let string=''; 
-let buttons=document.querySelectorAll('.button');
-     Array.from(buttons).forEach((button)=>{
-        button.addEventListener('click',(e)=>{
+buttons.forEach(button => {
+button.addEventListener('click',(e)=>{
 
+let value = e.target.innerHTML;
 
+if(value === '='){
+string = eval(string);
+display.value = string;
 
-            if(e.target.innerHTML== '='){
-                string=eval(string);
-                document.querySelector('input').value=string;
+}else if(value === 'C'){
+string = "";
+display.value = "";
 
+}else{
+string += value;
+display.value = string;
+}
 
-
-            }else if(e.target.innerHTML=='C'){
-                string=''
-                document.querySelector('input').value=string;
-            }
-
-            //    else if(e.target.innerhtml=="D"){
-              // string=string.length-1
-
-               //}
-                else{
-               // console.log(e.target)
-                string=string + e.target.innerHTML;
-                document.querySelector('input').value=string; 
-            }
-        })
-    })
+});
+});
 
 
+// DARK LIGHT THEME
+let toggle = document.getElementById("themeToggle");
 
+toggle.addEventListener("click",()=>{
+document.body.classList.toggle("dark");
+
+if(document.body.classList.contains("dark")){
+toggle.innerHTML="☀️"
+}else{
+toggle.innerHTML="🌙"
+}
+
+});
